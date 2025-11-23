@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF5E1; /* Color de fondo Crema Pastel */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #5D4037; /* Color de texto principal Marrón Oscuro */
+}
+
+main {
+    flex: 1;
+}
+
+/* Estilos para el encabezado de navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el nombre del sitio*/
+.site-name {
+    font-weight: bold;
+    color: #5D4037;
+}
+
+/* Estilos para los títulos principales de las secciones */
+h1, h2, h3, h4, h5, h6 {
+    color: #8B4513; /* Color de Chocolate */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #343a40 !important;
+    color: #fff;
+}
+
+/* Estilos para las tarjetas de productos */
+.card {
+    transition: transform 0.2s;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo para los botones principales */
+.btn-primary {
+    background-color: #FFC0CB; /* Color Rosa Suave */
+    border-color: #FFC0CB;
+    color: #5D4037;
+}
+
+.btn-primary:hover {
+    background-color: #FFB6C1;
+    border-color: #FFB6C1;
+}
+
+/* Estilo para que las imágenes de las tarjetas se adapten sin cortarse */
+.card-img-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Estilo para la imagen principal de la página de detalle */
+.product-main-image-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.product-main-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilo para las miniaturas en la página de detalle */
+.product-thumbnail {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para el logo de la empresa */
+.company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Elimina el borde del recuadro del logo en la página de inicio */
+main .product-main-image-container {
+    border: none;
+    box-shadow: none;
+}
+
+/* Estilos para texto secundario (descripciones) */
+.card-text {
+    color: #B0BEC5; /* Color Gris Claro */
+}
+
+/* para cortar textos con puntos suspensivos */
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* solo permite 1 línea */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 1;
+}
+
+/* Estilo para el nombre de la pasteleria */
+.site-name {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #6B3A1C;
+}
+
+/* Estilo para el texto del boton de "reigstrate aqui" dentro de iniciar sesión */
+.registro-link {
+    color: #6B3A1C;
+    text-decoration: none;
+    font-weight: normal;
+}
+.registro-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el boton de registro e iniciar sesión */
+.nav-link-personalizado {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 8px;
+}
+
+.nav-link-personalizado:hover {
+    background-color: #6B3A1C;
+}
+
+.img-detalle-noti {
+    display: block;
+    margin: 20px auto;
+    max-width: min(300px, 100%);
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+/* Estilos de la vista de administración */
+.admin-sidebar {
+    background-color: #343a40;
+    color: #fff;
+    min-height: 100vh;
+    width: 250px;
+    flex-shrink: 0;
+    padding: 1rem;
+}
+
+.admin-sidebar .nav {
+    padding: 0;
+    margin: 0; 
+}
+
+/* Ajuste para que el espacio entre ítems sea menor en todas las listas del menú */
+.admin-sidebar .nav-item {
+    margin-bottom: 0; 
+}
+
+.admin-sidebar .h4 {
+    margin-bottom: 1rem;
+}
+
+.admin-sidebar hr {
+    margin: 1rem 0;
+}
+
+/* Ajuste para que los enlaces sean más compactos en toda la barra lateral */
+.admin-sidebar .nav-link {
+    color: #b0bec5;
+    padding: 8px 15px; /* Valor ajustado para un menú más compacto */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background-color: #495057;
+    color: #fff;
+}
+
+.admin-sidebar .nav-link i.material-icons {
+    margin-right: 8px;
+}
+
+.admin-content {
+    background-color: #f8f9fa;
+    flex-grow: 1;
+}
+
+.admin-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-admin-nuevo {
+    background-color: #FFC0CB;
+    color: #8B4513;
+    border-color: #FFC0CB;
+    font-weight: bold;
+}
+
+.btn-admin-nuevo:hover {
+    background-color: #ffb5d0;
+    border-color: #ffb5d0;
+    color: #8B4513;
+}/* --- IMPORTANTE: Carga de Fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Usamos Open Sans como base */
+    background-color: #FFF5E1; /* Color de fondo Crema Pastel */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #5D4037; /* Color de texto principal Marrón Oscuro */
+}
+
+main {
+    flex: 1;
+}
+
+/* Estilos para el encabezado de navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el nombre del sitio */
+.site-name h1 {
+    font-family: 'Lobster', cursive; /* Fuente Lobster para el título */
+    font-size: 3rem;
+    color: #6B3A1C;
+    margin: 0;
+}
+
+/* Estilos para los títulos principales de las secciones */
+h1, h2, h3, h4, h5, h6 {
+    color: #8B4513; /* Color de Chocolate */
+}
+
+.section-title {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #8B4513;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #343a40 !important;
+    color: #fff;
+}
+
+/* Estilos para las tarjetas de productos */
+.card {
+    transition: transform 0.2s;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none; /* Quitamos borde por defecto de bootstrap */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo para los botones principales */
+.btn-primary {
+    background-color: #FFC0CB; /* Color Rosa Suave */
+    border-color: #FFC0CB;
+    color: #5D4037;
+    font-weight: bold;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #FFB6C1 !important;
+    border-color: #FFB6C1 !important;
+    color: #5D4037 !important;
+}
+
+/* Estilo para que las imágenes de las tarjetas se adapten sin cortarse */
+.card-img-container {
+    width: 100%;
+    height: 200px; /* Aumenté un poco para que se vea mejor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para imágenes transparentes */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantiene proporción */
+}
+
+/* Estilo para la imagen principal de la página de detalle/home */
+.product-main-image-container {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos para texto secundario (descripciones) */
+.card-text {
+    color: #5D4037;
+}
+
+.text-muted {
+    color: #8d6e63 !important; /* Un marrón más claro en vez de gris */
+}
+
+/* Botones del Navbar */
+.btn-outline-primary {
+    color: #8B4513;
+    border-color: #8B4513;
+}
+
+.btn-outline-primary:hover {
+    background-color: #8B4513;
+    color: #fff;
+}
