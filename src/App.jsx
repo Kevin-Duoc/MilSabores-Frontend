@@ -12,8 +12,8 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Productos from './pages/Productos';
 import DetalleProducto from './pages/DetalleProducto';
-// import Categorias from './pages/Categorias';
-// import Ofertas from './pages/Ofertas';
+import Categorias from './pages/Categorias';
+import Ofertas from './pages/Ofertas';
 // import Nosotros from './pages/Nosotros';
 // import Blogs from './pages/Blogs';
 // import DetalleBlog1 from './pages/DetalleBlog1'; // Ojo: Idealmente haremos esto dinámico luego (blogs/:id)
@@ -23,7 +23,7 @@ import DetalleProducto from './pages/DetalleProducto';
 // --- PÁGINAS DE USUARIO (AUTH & CLIENTE) ---
 import IniciarSesion from './pages/IniciarSesion';
 import RegistroUsuario from './pages/RegistroUsuario';
-// import Carro from './pages/Carro';
+import Carro from './pages/Carro';
 // import AjustesUsuario from './pages/AjustesUsuario';
 // import PedidosCliente from './pages/PedidosCliente';
 
@@ -49,23 +49,20 @@ function App() {
                 RUTAS PÚBLICAS
                ========================================= */}
             
-            {/* HOME (Asumimos que ya empezamos por aquí) */}
+            {/* HOME */}
             <Route path="/" element={<Home />} />
 
             {/* PRODUCTOS */}
             <Route path="/productos" element={<Productos />} />
-            {/*<Route path="/productos" element={<h2>PÁGINA: Catálogo de Productos (Pendiente)</h2>} />*/}
 
             {/* DETALLE PRODUCTO */}
             <Route path="/productos/:id" element={<DetalleProducto />} />
 
             {/* CATEGORIAS */}
-            {/* <Route path="/categorias" element={<Categorias />} /> */}
-            <Route path="/categorias" element={<h2>PÁGINA: Categorías (Pendiente)</h2>} />
+            <Route path="/categorias" element={<Categorias />} />
 
             {/* OFERTAS */}
-            {/* <Route path="/ofertas" element={<Ofertas />} /> */}
-            <Route path="/ofertas" element={<h2>PÁGINA: Ofertas (Pendiente)</h2>} />
+            <Route path="/ofertas" element={<Ofertas />} />
 
             {/* NOSOTROS */}
             {/* <Route path="/nosotros" element={<Nosotros />} /> */}
@@ -94,8 +91,7 @@ function App() {
             <Route path="/registro" element={<RegistroUsuario />} />
 
             {/* CARRO */}
-            {/* <Route path="/carro" element={<Carro />} /> */}
-            <Route path="/carro" element={<h2>PÁGINA: Carrito de Compras (Pendiente)</h2>} />
+            <Route path="/carro" element={<Carro />} />
 
             {/* AJUSTES USUARIO */}
             {/* <Route path="/ajustes" element={<AjustesUsuario />} /> */}
