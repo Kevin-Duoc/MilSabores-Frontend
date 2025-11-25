@@ -14,18 +14,17 @@ import Productos from './pages/Productos';
 import DetalleProducto from './pages/DetalleProducto';
 import Categorias from './pages/Categorias';
 import Ofertas from './pages/Ofertas';
-// import Nosotros from './pages/Nosotros';
-// import Blogs from './pages/Blogs';
-// import DetalleBlog1 from './pages/DetalleBlog1'; // Ojo: Idealmente haremos esto dinámico luego (blogs/:id)
-// import DetalleBlog2 from './pages/DetalleBlog2';
-// import Contacto from './pages/Contacto';
+import Nosotros from './pages/Nosotros';
+import Blogs from './pages/Blogs';
+import DetalleBlog from './pages/DetalleBlog';
+import Contacto from './pages/Contacto';
 
 // --- PÁGINAS DE USUARIO (AUTH & CLIENTE) ---
 import IniciarSesion from './pages/IniciarSesion';
 import RegistroUsuario from './pages/RegistroUsuario';
 import Carro from './pages/Carro';
-// import AjustesUsuario from './pages/AjustesUsuario';
-// import PedidosCliente from './pages/PedidosCliente';
+import AjustesUsuario from './pages/AjustesUsuario';
+import PedidosCliente from './pages/PedidosCliente';
 
 // --- PÁGINAS ADMIN ---
 // import AdminHome from './pages/admin/AdminHome';
@@ -66,19 +65,20 @@ function App() {
             <Route path="/ofertas" element={<Ofertas />} />
 
             {/* NOSOTROS */}
-            {/* <Route path="/nosotros" element={<Nosotros />} /> */}
-            <Route path="/nosotros" element={<h2>PÁGINA: Nosotros (Pendiente)</h2>} />
+            <Route path="/nosotros" element={<Nosotros />} />
+            {/*<Route path="/nosotros" element={<h2>PÁGINA: Nosotros (Pendiente)</h2>} />*/}
 
             {/* BLOGS */}
-            {/* <Route path="/blogs" element={<Blogs />} /> */}
-            <Route path="/blogs" element={<h2>PÁGINA: Blogs (Pendiente)</h2>} />
+            <Route path="/blogs" element={<Blogs />} /> 
+            <Route path="/blogs/detalle/:id" element={<DetalleBlog />} />
+            {/*<Route path="/blogs" element={<h2>PÁGINA: Blogs (Pendiente)</h2>} />*/}
             
             {/* <Route path="/blogs/detalle/1" element={<DetalleBlog1 />} /> */}
             {/* <Route path="/blogs/detalle/2" element={<DetalleBlog2 />} /> */}
 
             {/* CONTACTO */}
-            {/* <Route path="/contacto" element={<Contacto />} /> */}
-            <Route path="/contacto" element={<h2>PÁGINA: Contacto (Pendiente)</h2>} />
+            <Route path="/contacto" element={<Contacto />} />
+            {/*<Route path="/contacto" element={<h2>PÁGINA: Contacto (Pendiente)</h2>} />*/}
 
 
             {/* =========================================
@@ -95,12 +95,12 @@ function App() {
             <Route path="/carro" element={<Carro />} />
 
             {/* AJUSTES USUARIO */}
-            {/* <Route path="/ajustes" element={<AjustesUsuario />} /> */}
-            <Route path="/ajustes" element={<h2>PÁGINA: Ajustes de Usuario (Pendiente)</h2>} />
+            <Route path="/ajustes" element={<AjustesUsuario />} />
+            {/*<Route path="/ajustes" element={<h2>PÁGINA: Ajustes de Usuario (Pendiente)</h2>} />*/}
 
             {/* PEDIDOS CLIENTE */}
-            {/* <Route path="/pedidos" element={<PedidosCliente />} /> */}
-            <Route path="/pedidos" element={<h2>PÁGINA: Mis Pedidos (Pendiente)</h2>} />
+            <Route path="/pedidos" element={<PedidosCliente />} />
+            {/*<Route path="/pedidos" element={<h2>PÁGINA: Mis Pedidos (Pendiente)</h2>} />*/}
 
 
             {/* =========================================
