@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { API_URLS } from '../config/api';
 
 // URL del endpoint de ofertas activas
-const OFERTAS_API_URL = 'http://localhost:8082/api/v1/catalogo/productos/ofertas';
+const OFERTAS_API_URL = `${API_URLS.CATALOGO}/productos/ofertas`;
 
 // Componente para mostrar una sola tarjeta de oferta
 const OfertaCard = ({ producto }) => {

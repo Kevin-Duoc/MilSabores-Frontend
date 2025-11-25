@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2'; // Para mejorar la UX en errores/éxito
+import { API_URLS } from '../config/api';
 
 // URL del microservicio de pedidos
-const PEDIDOS_API_URL = 'http://localhost:8083/api/v1/pedidos';
+const PEDIDOS_API_URL = `${API_URLS.PEDIDOS}`;
 
 // Funciones auxiliares para el carro (Mantendremos sessionStorage como caché temporal)
 const obtenerCarro = () => JSON.parse(sessionStorage.getItem('carro') || '[]');

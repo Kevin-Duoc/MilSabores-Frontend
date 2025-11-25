@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { API_URLS } from '../config/api';
 import ProductCard from '../components/common/ProductCard';
 
 // Ruta del logo
@@ -14,11 +15,11 @@ const Home = () => {
     useEffect(() => {
         const cargarProductos = async () => {
             try {
-                // Conexión al backend (Puerto 8082)
-                const respuesta = await axios.get('http://localhost:8082/api/v1/catalogo/productos');
+                // Conexión al backend (Puerto 8082) / 'http://localhost:8082...
+                const response = await axios.get(`${API_URLS.CATALOGO}/productos`);
                 
                 // Tomamos los primeros 4 productos para mostrar en el Home (igual que antes)
-                setProductosDestacados(respuesta.data.slice(0, 4));
+                setProductosDestacados(response.data.slice(0, 4));
                 setLoading(false);
             } catch (error) {
                 console.error("Error cargando productos:", error);

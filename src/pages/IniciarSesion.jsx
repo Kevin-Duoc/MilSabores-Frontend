@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { API_URLS } from '../config/api';
 
 const LOGO_PATH = '/images/logo_empresa.png';
-const AUTH_API_URL = 'http://localhost:8081/api/v1/auth/login';
+const AUTH_API_URL = `${API_URLS.AUTH}/login`;
 
 const IniciarSesion = () => {
     const navigate = useNavigate();

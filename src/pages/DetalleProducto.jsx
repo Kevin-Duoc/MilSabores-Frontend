@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_URLS } from '../config/api';
 
 const LOGO_PATH = '/images/logo_empresa.png';
 
@@ -43,7 +44,8 @@ const DetalleProducto = () => {
         const fetchProducto = async () => {
             try {
                 // Llamada a tu API Java
-                const response = await axios.get(`http://localhost:8082/api/v1/catalogo/productos/${id}`);
+                // URL esperada: http://52.73...:8082/api/v1/catalogo/productos/1
+                const response = await axios.get(`${API_URLS.CATALOGO}/productos/${id}`);
                 setProducto(response.data);
                 setLoading(false);
             } catch (err) {

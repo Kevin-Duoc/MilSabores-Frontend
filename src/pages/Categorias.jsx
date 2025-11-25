@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { API_URLS } from '../config/api';
 
 // Componente para una tarjeta de Categoría reutilizable
 const CategoriaCard = ({ categoria, onSelectCategory }) => {
@@ -64,9 +65,9 @@ const Categorias = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // 🛑 Endpoint para filtrar productos (AÑADIR ESTE EN BACKEND EN EL PRÓXIMO PASO)
-    const PRODUCTOS_API_URL = 'http://localhost:8082/api/v1/catalogo/productos/categoria'; 
-    const CATEGORIAS_API_URL = 'http://localhost:8082/api/v1/catalogo/categorias';
+    // API_URLS.CATALOGO ya es 'http://52...:8082/api/v1/catalogo'
+    const PRODUCTOS_API_URL = `${API_URLS.CATALOGO}/productos/categoria`; 
+    const CATEGORIAS_API_URL = `${API_URLS.CATALOGO}/categorias`;
 
 
     // 1. Efecto: Cargar todas las categorías al montar

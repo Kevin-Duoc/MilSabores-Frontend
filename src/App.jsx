@@ -33,6 +33,7 @@ import Carro from './pages/Carro';
 // import AdminNuevoProducto from './pages/admin/AdminNuevoProducto';
 // import AdminPedidos from './pages/admin/AdminPedidos';
 
+import { API_URLS } from './config/api';
 
 function App() {
   return (

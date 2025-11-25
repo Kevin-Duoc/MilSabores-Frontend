@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { API_URLS } from '../config/api';
 
 const LOGO_PATH = '/images/logo_empresa.png';
 
 // --- ENDPOINTS ---
 // Ajusta el puerto (8081 u 8082) según tu backend
-const REGISTER_API_URL = 'http://localhost:8081/api/v1/auth/register';
-const LOGIN_API_URL    = 'http://localhost:8081/api/v1/auth/login'; 
+const REGISTER_API_URL = `${API_URLS.AUTH}/register`;
+const LOGIN_API_URL    = `${API_URLS.AUTH}/login`;
 
 const RegistroUsuario = () => {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import { API_URLS } from '../config/api';
 // Componente Tarjeta Interno (Adaptado a tus DTOs)
 const ProductCard = ({ producto }) => {
     // Mapeo de campos del DTO:
@@ -53,7 +53,8 @@ const Productos = () => {
         const fetchProductos = async () => {
             try {
                 // Conexión al endpoint real del microservicio
-                const response = await axios.get('http://localhost:8082/api/v1/catalogo/productos');
+                //'http://52.73.124.122:8082/api/v1/catalogo/productos'
+                const response = await axios.get(`${API_URLS.CATALOGO}/productos`);
                 
                 // Si la respuesta es exitosa (200 OK), guardamos los datos
                 setProductos(response.data);
